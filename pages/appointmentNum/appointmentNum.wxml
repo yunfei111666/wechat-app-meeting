@@ -1,0 +1,37 @@
+<view class='ordersuccess'>
+  <view class='header'>
+    <view class='liner-circle'>
+      <view class='box'>
+        <text class='iconfont icon-queding'></text>
+      </view>
+    </view>
+    <view class='title'>预约成功</view>
+  </view>
+  <view class='main'>
+    <view class='section'>
+      <text class='label'>会议房间</text>
+      <text class='value1'>{{meetingID}}</text>
+      <text class='unit'>房间</text>
+    </view>
+    <view class='section'>
+      <text class='label'>会议密码</text>
+      <text class='value2'>{{password}}</text>
+    </view>
+    <view class='section'>
+      <text class='label'>会议主题</text>
+      <text class='value2'>{{title}}</text>
+    </view>
+    <view class='section'>
+      <text class='label'>会议时间</text>
+      <text class='value2'>{{time}}</text>
+      <view class='countdown'>会议倒计时 {{countDownTime.day}}天{{countDownTime.hou}}时{{countDownTime.min}}分{{countDownTime.sec}}秒</view>
+    </view>
+  </view>
+  <view class="btn-area">
+    <view class='copy {{isActive==0?"active":""}}' bindtap="copy" formType="submit"> 复制会议信息 </view>
+    <view style="position: relative" class='share {{isActive==1?"active":""}}' formType="submit">
+      分享会议信息
+      <!-- <button bindtap="share" class='shareBtn' open-type="share" plain='true' formType="submit" loading="{{btnLoading}}"></button> -->
+    </view>
+  </view>
+</view>

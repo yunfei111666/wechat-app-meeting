@@ -1,0 +1,59 @@
+<!--index.wxml-->
+<view>
+  <view class="userinfo">
+    <image bindtap="naviToUserinfo" class="userinfo-avatar" src="{{avatarUrl}}" mode="aspectFit" wx:if='{{avatarUrl!=""}}'></image>
+    <image bindtap="naviToUserinfo" class="userinfo-avatar" src="../../img/user_placeholder.png" mode="aspectFit" wx:else></image>
+    <text class="userinfo-login" wx:if='{{isShowName}}'>{{nickname}}</text>
+    <text class="userinfo-login" bindtap="naviToLogin" wx:if='{{isShowBtn}}'>请点击登陆</text>
+  </view>
+</view>
+
+<!-- 没设备时的添加设备模块 -->
+<view class = "equipment" bindtap="addEquipment" wx:if='{{!hasEquipment}}'>
+  <view class="equipment-block">
+    <!-- <image class ="equipment-img" src="../../img/add_big.png"></image> -->
+    <text class="equipment-img iconfont icon-jia-"></text>
+    <text class="equipment-text">添加设备</text>
+  </view>
+</view>
+
+<!-- 有设备时的控制及添加按钮 -->
+<view class="equipment" wx:if='{{hasEquipment}}'>
+  <view bindtap="addEquipment" class="add-equipment_little">
+    <image class="add-equipment_little_img" src="../../img/add_small.png"></image>
+    <text class="add-equipment_little_text">添加设备</text>
+  </view>
+  <view class="equipment-block-haven">
+    <view class="equipment-block-haven-top">
+      <text class="equipment-block-haven-name">{{deviceName}}</text>
+      <image bindtap="naviToDeviceChange" class="equipment-block-haven-img" src="../../img/exchange.png"></image>
+    </view>
+    <view class="equipment-block-haven-btnblock">
+      <view class="equipment-block-haven-btn" bindtap="microBtnClicked">
+        <image class="equipment-block-haven-btnimg" src="{{microSrc}}"></image>
+        <text class="equipment-block-haven-btntext">话 筒</text>
+      </view>
+      <view class="equipment-block-haven-btn" bindtap="cameraBtnCkicked">
+        <image class="equipment-block-haven-btnimg" src="{{cameraSrc}}"></image>
+        <text class="equipment-block-haven-btntext">摄 像</text>
+      </view>
+      <view class="equipment-block-haven-btn" bindtap="naviToDeviceConfig">
+        <image class="equipment-block-haven-btnimg" src="../../img/setting.png"></image>
+        <text class="equipment-block-haven-btntext">其他设置</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="index-line"></view>
+
+<view class="index-bottom-block">
+  <view class="index-bottom-item" bindtap="gotoReadme">
+    <text class="index-bottom-text">会议宝使用说明</text>
+    <image class="index-bottom-img iconfont icon-you1"></image>
+  </view>
+  <view class="index-bottom-item" bindtap="gotoFeedback">
+    <text class="index-bottom-text">我要反馈</text>
+    <image class="index-bottom-img iconfont icon-you1"></image>
+  </view>
+</view>

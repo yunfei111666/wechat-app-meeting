@@ -1,0 +1,49 @@
+
+<view class="page">
+  <view class="top">
+    <view class="weui-cells weui-cells_after-title">
+        <navigator url="../modifyName/modifyName" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                  <view class="weui-cell__bd">修改会议宝名称</view>
+                  <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+        <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap="toWiFi">
+                  <view class="weui-cell__bd">WiFi重置</view>
+                  <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+          <navigator url="../equiment/equiment" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                  <view class="weui-cell__bd">蓝牙设置</view>
+                  <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+    </view>
+  </view>
+  <view class="bottom">
+      <view class="voice">
+          <text>调整音量:</text>
+          <slider min="0" max="5" value="{{volvalue}}" activeColor="#10AEFF" bindchange="changevol" />
+      </view>
+       <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell">
+          <view class="weui-cell__bd">话筒设置</view>
+          <view class="weui-cell__ft">
+            <switch bindchange="microBtnClicked" color="#10AEFF" checked="{{isMicroOpen}}"></switch>
+          </view>
+        </view>
+         <view class="weui-cell">
+          <view class="weui-cell__bd">摄像头开关</view>
+          <view class="weui-cell__ft">
+            <switch bindchange="cameraBtnCkicked" color="#10AEFF" checked="{{ isCameraOpen}}"></switch>
+          </view>
+        </view>
+         <view class="weui-cell">
+          <view class="weui-cell__bd">摄像头升起</view>
+          <view class="weui-cell__ft">
+            <switch bindchange="cameraRiseBtnCkicked" color="#10AEFF" checked="{{ isCameraRiseOpen}}"></switch>
+          </view>
+        </view>
+      </view>
+  </view>
+ 
+</view>
+ <view class="footer" bindtap="remove">
+  <text>解绑设备</text>
+ </view>

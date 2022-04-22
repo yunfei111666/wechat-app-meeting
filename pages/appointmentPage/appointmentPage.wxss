@@ -1,0 +1,174 @@
+/* pages/person/person.wxss */
+@import "../../wxss/icon.wxss";
+
+.meeting-title {
+  padding: 85rpx 0 42rpx 0;
+  color: #2e2e39;
+  font-size: 42rpx;
+}
+
+.meeting-title-text {
+  /* color: #25b4ff; */
+}
+
+.register {
+  text-align: center;
+}
+
+.logo {
+  margin-top: 100rpx;
+  margin-bottom: 120rpx;
+}
+
+.logo image {
+  width: 400rpx;
+  height: 60rpx;
+}
+
+.input-area {
+  background-color: #fff;
+  text-align: left;
+  padding: 0 10%;
+}
+
+.section {
+  width: 100%;
+  position: relative;
+  padding-top: 35rpx;
+  padding-bottom: 15rpx;
+  border-bottom: 1px solid #ddd;
+}
+
+.label {
+  /* position: absolute;
+  left: 0;
+  top: 25rpx; */
+  font-size: 24rpx;
+  color: #333;
+}
+
+.input-area input, .row-wrap {
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 14px;
+  color: #000;
+}
+
+.input-area input {
+  box-sizing: border-box;
+  /* padding-left: 20%; */
+}
+
+.gray {
+  color: #ddd !important;
+}
+
+.row-wrap {
+  position: relative;
+}
+
+.radio-group {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.picker-date {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+#username {
+  border-bottom: 1px solid #ddd;
+}
+
+.btn-area {
+  width: 80%;
+  margin: 0 auto;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+.btn-area button {
+  /*background-color: #ff9900;*/
+  margin: 0;
+  padding: 0;
+  margin-top: 64rpx;
+  color: #fff;
+  font-size: 37rpx;
+  border: none;
+  width: 100%;
+  height: 96rpx;
+  line-height: 96rpx;
+  font-weight: none;
+}
+
+.txt-area {
+  margin-top: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  font-size: 30rpx;
+}
+
+.forgot-password {
+  color: #888;
+}
+
+.register {
+  color: #f90;
+}
+
+.btn-area:active {
+  opacity: 0.7;
+}
+
+.smsCode {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+}
+
+.smsCode input {
+  width: 336rpx;
+}
+
+.smsCode .getSmsCodeBtn {
+  font-size: 20rpx;
+  color: #fff;
+  width: 160rpx;
+  box-sizing: border-box;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-top: 20rpx;
+  margin-right: 0;
+}
+
+.btn-area>.one-appointment {
+  width: 75%;
+  background-color: #10aeff;
+  border-radius: 50rpx;
+  font-size: 36rpx;
+}
+
+.pickerCla {
+  height: 90rpx;
+  line-height: 90rpx;
+}
+
+.addMeeting {
+  position: absolute;
+  right: 0rpx;
+  top: 96rpx;
+  width: 40rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  color: #000;
+  z-index: 5;
+}

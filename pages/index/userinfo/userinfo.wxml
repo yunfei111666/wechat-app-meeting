@@ -1,0 +1,31 @@
+<!--pages/index/userinfo/userinfo.wxml-->
+<view class="kind-list__item-bd kind-list__item-bd_show">
+  <view class="weui-cells weui-cells_show">
+     <view class="weui-cell weui-cell_access" >
+        <view class="weui-cell__bd"> 昵称</view>
+        <text>{{userInfo.nickname}}</text>
+     </view>
+     <view class="weui-cell weui-cell_access" >
+        <view class="weui-cell__bd"> 手机号</view>
+        <text>{{userInfo.phone}}</text>
+     </view>
+     <view class="weui-cell weui-cell_access" >
+        <view class="weui-cell__bd"> QQ号</view>
+        <text>{{userInfo.qq}}</text>
+     </view>
+     <view class="weui-cell weui-cell_access" >
+        <view class="weui-cell__bd"> 微博</view>
+        <text>{{userInfo.weibo}}</text>
+     </view>
+     <view class="weui-cell weui-cell_access" >
+        <view class="weui-cell__bd"> 电子邮件</view>
+        <text>{{userInfo.email}}</text>
+     </view>
+  </view>
+</view>
+
+
+
+<view class="logout-btn">
+  <button class="weui-btn weui-btn_primary" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">使用微信信息</button>
+</view>

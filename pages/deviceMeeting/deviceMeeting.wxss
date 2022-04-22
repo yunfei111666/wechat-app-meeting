@@ -1,0 +1,457 @@
+@import "../../wxss/icon.wxss";
+
+.MeetingPage {
+  position: relative;
+}
+
+.show {
+  display: show !important;
+}
+
+.hide {
+  display: none !important;
+}
+
+.title {
+  padding: 0 5.9%;
+  text-align: left;
+  width: 88.3%;
+  height: 140rpx;
+  line-height: 50rpx;
+}
+
+.title-main {
+  font-size: 34rpx;
+  color: #2E2E39;
+}
+
+.title-subhead {
+  font-size: 24rpx;
+  color: #464646;
+}
+
+.title-name {
+  font-size: 22rpx;
+}
+
+.right-box-btn {
+  position: absolute;
+  right: 10%;
+}
+
+.icon-shexiangtou {
+  font-size: 40rpx;
+}
+
+.icon-huatong {
+  font-size: 40rpx;
+}
+
+.top-phone-icon {
+  position: absolute;
+  top: 2.6%;
+  right: 5.9%;
+  font-size: 50rpx;
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.icon-guaduandianhua {
+  font-size: 70rpx;
+  color: #E4505D;
+}
+
+.filming-video {
+  width: 154rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  border: 1px solid #E4505D;
+  border-radius: 10rpx;
+  color: #fff;
+  background: #E4505D;
+  padding: 0 15rpx;
+  margin-left: 3.3%;
+  font-size: 22rpx;
+}
+
+.row {
+  height: 340rpx;
+  display: flex;
+}
+
+.meeting {
+  background-image: -webkit-linear-gradient(top, #e977bc 0%, #e977bc 30%, #8c86cb 60%, #98dcf6 90%);
+  background-image: -moz-linear-gradient(top, #e977bc 0%, #e977bc 30%, #8c86cb 60%, #98dcf6 90%);
+  background-image: linear-gradient(top, #e977bc 0%, #e977bc 30%, #8c86cb 60%, #98dcf6 90%);
+  margin: 0 auto;
+  border-radius: 50%;
+  text-align: center;
+  color: #fff;
+  width: 115px;
+  height: 115px;
+  position: absolute;
+  left:80px;
+  top: 26px;
+  margin-left: -55px;
+  z-index: 2;
+}
+
+/* 圆 */
+
+.wrap {
+  position: absolute;
+  left: 50%;
+  margin-left: -165rpx;
+
+}
+
+.circle-box {
+  width: 165px;
+  height: 165px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.canvasbg {
+  width: 165px;
+  height: 165px;
+  position: absolute;
+  background: #F6F6F6;
+  border-radius: 165rpx;
+}
+
+.canvasps {
+  width: 165px;
+  height: 165px;
+}
+
+.state {
+  font-size: 50rpx;
+}
+
+.all-btn-click {
+  display: flex;
+  padding: 0 5.9% 20rpx 5.9%;
+}
+
+.all-btn-children {
+  width: 180rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+}
+
+.icon-shexiangtou1 {
+  font-size: 33rpx;
+  color: #414141;
+}
+
+.icon-shezhi {
+  font-size: 33rpx;
+  color: #414141;
+}
+
+.icon-huatong {
+  font-size: 33rpx;
+  color: #414141;
+}
+
+.all-btn-click .all-person-btn {
+  font-size: 24rpx;
+  padding: 0 2%;
+  border-radius: 10rpx;
+  color: #414141;
+}
+
+.voice {
+  padding:20rpx 0 30rpx 5.9%;
+}
+
+.voice text {
+  margin: 40rpx 0;
+  font-size: 24rpx;
+}
+
+.weui-cells {
+  font-size: 16px;
+}
+
+.weui-att-ter {
+  width: 88.3%;
+  padding: 2.4% 5.9%;
+  display: flex;
+}
+
+.weui-att-ter-left {
+  width: 40%;
+}
+
+.weui-right-btns {
+  width: 60%;
+  display: flex;
+}
+.list_box{
+  height: 470rpx;
+  overflow-y: auto;
+}
+.weui-list-ulbox {
+  padding: 0 5.9%;
+  height: 94rpx;
+  line-height: 94rpx;
+  display: flex;
+  position: relative;
+}
+
+.weui-list-right {
+  position: absolute;
+  right: 5.9%;
+}
+
+.weui-list-right text {
+  padding: 10rpx;
+}
+
+.icon-jingyin1 {
+  font-size: 33rpx;
+  color: #414141;
+}
+
+.compere {
+  width: 67rpx;
+  height: 32rpx;
+  background: #E4505D;
+  color: #fff;
+  border-radius: 9rpx;
+  padding: 2rpx 10rpx;
+  font-size: 20rpx;
+  line-height: 32rpx;
+}
+
+.weui-list-left {
+  border-bottom: 1rpx solid rgba(0, 0, 0, .1);
+  width: 100%;
+}
+
+.weui-right-mute {
+  width: 180rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+  border: 2rpx solid #E4E4E4;
+  border-radius: 20rpx;
+  color: #414141;
+  font-size: 24rpx;
+  flex: 1;
+}
+
+.weui-right-unmute {
+  margin-left: 4%;
+  font-size: 24rpx;
+  width: 180rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+  border: 2rpx solid #E4E4E4;
+  border-radius: 20rpx;
+  color: #414141;
+  flex: 1;
+}
+
+.weui-att-text {
+  font-size: 28rpx;
+  color: #414141;
+}
+
+.weui-att-terNum {
+  font-size: 20rpx;
+  color: #E4505D;
+}
+
+.blueShow {
+  color: #1EB2FF;
+  border: 2rpx solid #1EB2FF !important;
+}
+
+.blueShow2 text {
+  color: #1EB2FF !important;
+}
+
+
+.curr{
+  color: #1EB2FF;
+}
+
+/*模态框*/
+
+.modals {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.modals-cancel {
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.bottom-dialog-body {
+  position: absolute;
+  z-index: 10001;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 515rpx;
+  background-color: #fff;
+}
+
+/*动画前初始位置*/
+
+.bottom-pos {
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+}
+
+.close-btn {
+  width: 50rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 5rpx;
+}
+
+.weui-More-Settings {
+  height: 70rpx;
+  line-height: 70rpx;
+  padding: 2% 3.2%;
+  border-bottom: 1px solid #F6F6F6;
+}
+
+.weui-More-Settings-left {
+  font-size: 28rpx;
+  color: #2E2E39;
+}
+
+.weui-More-Settings-right {
+  float: right;
+}
+
+.record-video-box {
+  padding: 0 5.9%;
+  height: 94rpx;
+  line-height: 94rpx;
+}
+
+.record-video-left {
+  float: left;
+  font-size: 24rpx;
+}
+
+.red_btn_audio {
+  display: inline-block;
+  margin-left: 10%;
+}
+
+.two-red-btn {
+  width: 70rpx;
+  height: 70rpx;
+  border: 1px solid #ddd;
+  line-height: 80rpx;
+  text-align: center;
+  float: left;
+  border-radius: 70rpx;
+  margin-top: 14rpx;
+}
+
+.two-red-center {
+  width: 36rpx;
+  height: 36rpx;
+  background: #E4505D;
+  display: inline-block;
+  border-radius: 5rpx;
+  margin-top: 0rpx;
+  margin-left: 2rpx;
+}
+
+.red_btn_text {
+  padding-left: 30rpx;
+  float: right;
+  color: #E4505D;
+  font-size: 24rpx;
+}
+
+.red_btn_audios {
+  display: inline-block;
+  margin-left: 13.8%;
+  line-height: 60rpx;
+  height: 60rpx;
+}
+
+.two-red-btns {
+  width: 70rpx;
+  height: 70rpx;
+  border: 1px solid #ddd;
+  line-height: 70rpx;
+  text-align: center;
+  float: left;
+  border-radius: 70rpx;
+  margin-top: 10rpx;
+}
+
+.two-red-centers {
+  width: 36rpx;
+  height: 36rpx;
+  background: #E4505D;
+  display: inline-block;
+  border-radius: 36rpx;
+  margin-top: 18rpx;
+}
+
+.red_btn_texts {
+  float: right;
+}
+
+.weui-painting-select-box {
+  display: flex;
+}
+
+.weui-painting-btn {
+  font-size: 24rpx;
+}
+
+.weui-painting-metting {
+  padding: 0 5.9%;
+  height: 150rpx;
+}
+
+.weui-painting-metting-title {
+  border-top: 1px solid #EFF0F2;
+  font-size: 24rpx;
+  color: #2E2E39;
+  padding: 15rpx 0rpx;
+}
+
+.weui-painting-select {
+  width: 160rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  border: 2rpx solid #E4E4E4;
+  border-radius: 6rpx;
+}
+
+.radio-style {
+  width: 160rpx;
+  height: 60rpx;
+  font-size: 24rpx;
+  text-align: center;
+  line-height: 60rpx;
+}

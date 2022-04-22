@@ -1,0 +1,18 @@
+@import "../../wxss/icon.wxss";
+.header{
+  height: 200rpx;
+  line-height: 200rpx;
+  text-align: center;
+  font-size: 35rpx;
+}
+.wifi_icon{
+  width: 50rpx;
+  height: 50rpx;
+}
+.wifi_name{
+    position: relative;
+    top: -10rpx;
+    left: 20rpx;
+}
+
+

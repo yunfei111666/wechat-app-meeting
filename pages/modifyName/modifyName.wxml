@@ -1,0 +1,11 @@
+
+<view class="Page">
+    <view class="name">
+        <input bindinput="getName" placeholder="请输入新名称" value="{{searchinput}}"></input>
+        <image src="../../img/shebei/del.png" bindtap="clearName"></image>
+    </view>
+    <view class="title">会议宝名称不超过10个字符</view>
+    <view class="submit">
+      <text bindtap="clearName" bindtap="submit">提交修改</text>
+    </view>
+</view>

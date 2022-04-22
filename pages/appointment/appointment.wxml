@@ -1,0 +1,138 @@
+<view class='appointment'>
+  <view class='appointment_top'>
+    <view class="left {{hasShowOrHide?'showDevice':'hide'}}">
+      <text bindtap='addDevice' class="left-text">添加设备</text>
+      <text bindtap='addDevice' class="iconfont icon-tianjiashebei" style="color:#4b4b4b"></text>
+    </view>
+    <view class="left {{hasShowOrHide?'hide':'showDevice'}}">
+      <text bindtap='deviceChange' class="left-text">{{deviceName}} </text>
+      <text bindtap='deviceChange' class="iconfont icon-qiehuan" style="color:#4b4b4b;font-size: 32rpx;"></text>
+    </view>
+    <!-- <view class="right">
+      <text class="iconfont icon-search"></text>
+      <text class="iconfont icon-saoma"></text>
+    </view> -->
+  </view>
+  <view class="info-no-content {{hasShowOrHide?'show':'hide'}}">
+        <image src="../../img/appointment/no_deviceIcon.png"></image>
+        <text>这里空空哒,什么也没有</text>
+        <text>快去添加会议设备吧!</text>
+      </view>
+  <view class="{{hasShowOrHide?'hide':'show'}}">
+    <view class="meeting-in-pro {{showViewCard?'hide':'show'}}">
+      <view class="meeting-top">
+        <view class="metting-left">正在进行的会议</view>
+        <!-- <view class="meeting-top-text">
+          <text class="meeting-fel-small">9点30分开始</text>
+        </view> -->
+        <view class="metting-right">
+          <button open-type="share" plain='true' class='iconfont icon-fenxiang btn_click'></button>
+          <button bindtap="titleCopy" plain='true' class='iconfont icon-fuzhi1 btn_click'></button>
+        </view>
+      </view>
+      <view class="meeting-top-room">
+        <view class="meeting-top-del">
+          <view class="meeting-top-text" style="flex:1">
+            <text class="metting-num-big">{{meetingID}}</text>
+            <text class="meeting-fel-small">  房间</text>
+          </view>
+          <view class="meeting-top-text" style="padding-right:35rpx">
+            <text class="meeting-fel-small">{{snNum}}个终端</text>
+          </view>
+          <view class="meeting-top-text" style="padding-right:25rpx">
+            <text class="meeting-fel-small">{{deviceTime}}开始</text>
+          </view>
+        </view>
+      </view>
+      <view class="meeting-huiYi">
+        <text wx:if="{{deviceTitle == ''}}">无</text>
+        <text wx:else>{{deviceTitle}}</text>
+      </view>
+      <view class="meeting-in-room">
+        <view class="meeting-in-room-btn" bindtap="inRoom" hover-class="aa" hover-stay-time="50">
+          <view class="meeting-in-room-child">进入房间</view>
+        </view>
+      </view>
+    </view>
+    <view class="main">
+      <view class='item' bindtap='rapidGo'>
+        <view class='liner-circle circleBorCorBl'>
+          <view class='box'>
+            <text class='iconfont icon-kuaisu-copy'></text>
+          </view>
+        </view>
+        <view style="font-size:24rpx;">快速会议</view>
+      </view>
+      <view class='item' bindtap='addGo'>
+        <view class='liner-circle circleBorCorRe'>
+          <view class='box'>
+            <text class='iconfont icon-jiahao'></text>
+          </view>
+        </view>
+        <view style="font-size:24rpx;">加入会议</view>
+      </view>
+      <view class='item' bindtap='appointmentGo'>
+        <view class='liner-circle circleBorCorVi'>
+          <view class='box'>
+            <text class='iconfont icon-yuyue'></text>
+          </view>
+        </view>
+        <view style="font-size:24rpx;">预约会议</view>
+      </view>
+    </view>
+    <view class="tabNav">
+      <view class='item'>
+        <text class="text_l">我的预约</text>
+        <!-- <text class="text_r">更多</text> -->
+      </view>
+    </view>
+    <view class="pend-meeting">
+      <view class="info-no-content {{showView?'show':'hide'}}">
+        <image src="../../img/appointment/no_appointment.png"></image>
+        <text>没有预约会议</text>
+      </view>
+      <view class="info-content {{showView?'hide':'show'}}" wx:for="{{list}}" wx:for-index="index" wx:key='*this'>
+        <view class='info-top'>
+          <view class='info-left'>
+            <view class='font30'>
+              <text class="fontroom">{{item.meetingID}}房间</text>
+              <view class="font-time font-timeS">
+                <text>{{countDownList[index].day}}天{{countDownList[index].hou}}时{{countDownList[index].min}}分{{countDownList[index].sec}}秒</text>
+              </view>
+            </view>
+            <view class="font20" wx:if="{{item.title == null}}">无</view>
+            <view class="font20" wx:else>{{item.title}}</view>
+            <view class="font20">会议时间：
+              <text class="meet-time">{{item.time}}</text> </view>
+          </view>
+          <view class='info-right'>
+            <view class="fuzhi-fenX">
+              <!-- <button open-type="share" id="{{item.meetingID}}" data-password="{{item.password}}" data-title="{{item.title}}" data-time="{{item.time}}" plain='true' class='iconfont icon-fenxiang btn_click'></button> -->
+              <button bindtap="copy" id="{{item.meetingID}}" data-password="{{item.password}}" data-title="{{item.title}}" data-time="{{item.time}}" plain='true' class='iconfont icon-fuzhi1 btn_click'></button>
+            </view>
+            <!-- <view bindtap="addMeeting" class='action'>加入会议</view> -->
+          </view>
+        </view>
+      </view>
+      <!-- <view class='info-content'>
+      <view class='info-top'>
+        <view class='info-left'>
+          <view class='font30'>
+            <text class="fontroom">0910房间</text>
+            
+          </view>
+          <view class="font20">产品动员会议</view>
+          <view class="font20">会议时间：<text class="meet-time">12月5日 9:00:00</text> </view>
+        </view>
+        <view class='info-right'>
+          <view class="fuzhi-fenX">
+            <button open-type="share" plain='true' class='iconfont icon-fenxiang btn_click'></button>
+            <button bindtap="copy" plain='true' class='iconfont icon-fuzhi1 btn_click'></button>
+          </view>
+          <view bindtap="addMeeting" class='noaction'>加入会议</view>
+        </view>
+      </view>
+    </view> -->
+    </view>
+  </view>
+</view>

@@ -1,0 +1,26 @@
+<view class="Page">
+  <view class="header">
+      <view class="title">正在为您的会议报配置网络</view>
+      <view class="sub">请您耐心等待，不要着急</view>
+  </view>
+  <view class="contetn">
+      <image class="wifi" src="../../img/shebei/wifi2.png"></image>
+  </view>
+  <view class="progress_box">
+      <view class="weui-progress">
+        <view class="weui-progress__bar">
+            <progress percent="{{progress}}" stroke-width="5" />
+        </view>
+      </view>
+  </view>
+  <view class="text">
+      <view hidden="{{show1}}">发送WI-FI信息</view>
+      <view hidden="{{show2}}">设备已经收到Wi-Fi信息</view>
+      <view hidden="{{show3}}">正在绑定设备</view>
+      <view hidden="{{show4}}">检查设备联网状态</view>
+      <view hidden="{{isEnd}}">{{msg}}</view>
+  </view>
+  <view>
+    <button hidden="{{isEnd}}" bindtap="btnClicked" class="one-appointment" style="background-color:#10AEFF" formType="submit">返回</button> 
+  </view>
+</view>

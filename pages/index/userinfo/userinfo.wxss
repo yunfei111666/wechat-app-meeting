@@ -1,0 +1,5 @@
+/* pages/index/userinfo/userinfo.wxss */
+.logout-btn{
+  margin-top: 500rpx;
+  margin-bottom: 50rpx;
+}

@@ -1,0 +1,138 @@
+<view class="MeetingPage">
+	<view class="title">
+		<text class="title-main">{{meetingTitle}}</text>
+		<!-- <text hidden="{{manager!=RCID}}">(主持人)</text> -->
+		<view bindtap="hangUp" class="top-phone-icon">
+			<text class="iconfont icon-guaduandianhua"></text>
+		</view>
+	</view>
+	<view class="row">
+		<view class="title-name">
+		</view>
+		<view class="wrap">
+			<view class="circle-box">
+				<view class="meeting" bindtap="rotate" bindtouchstart='rotateStart' bindtouchmove='rotateMove' bindtouchend='rotateEnd'>
+					<view style="font-size:20rpx;color:#ddd;margin-top:40rpx;">会议房间</view>
+					<view class="state">{{meetingID}}</view>
+					<view>{{realTimeObj.hou}}:{{realTimeObj.min}}:{{realTimeObj.sec}}</view>
+				</view>
+				<canvas class="canvasbg" canvas-id="canvasbg"></canvas>
+				<canvas class="canvasps" canvas-id="canvasps"></canvas>
+			</view>
+		</view>
+		<view class='right-box-btn'>
+		</view>
+	</view>
+	<view class="all-btn-click">
+		<view bindtap="pickup" class="all-btn-children {{pickup_off?'show':'hide'}}">
+			<text class="iconfont icon-shexiangtou1"></text>
+			<text class="all-person-btn">开启视频</text>
+		</view>
+		<view bindtap="pickup" class="all-btn-children blueShow2 {{pickup_off?'hide':'show'}}">
+			<text class="iconfont icon-shexiangtou1"></text>
+			<text class="all-person-btn">停止视频</text>
+		</view>
+		<view bindtap="speak" class="all-btn-children {{speak_off?'show':'hide'}}" style="padding:0 8.1%">
+			<text class="iconfont icon-huatong"></text>
+			<text class="all-person-btn">开启静音</text>
+		</view>
+		<view bindtap="speak" class="all-btn-children blueShow2 {{speak_off?'hide':'show'}}" style="padding:0 8.1%">
+			<text class="iconfont icon-jingyin1"></text>
+			<text class="all-person-btn">解除静音</text>
+		</view>
+		<view class="all-btn-children">
+			<text class="iconfont icon-shezhi"></text>
+			<text bindtap="showModal" class="all-person-btn">更多设置</text>
+		</view>
+	</view>
+
+	<view class="weui-att-ter">
+		<view class="weui-att-ter-left">
+			<view class="weui-att-text">参会终端</view>
+			<view class="weui-att-terNum">{{terminalNum}}个终端在线</view>
+		</view>
+		<view class="weui-right-btns">
+			<view bindtap='allMute' class="weui-right-mute" hidden="{{manager!=RCID}}">
+				<text>全体静音</text>
+			</view>
+			<view bindtap='allUnmute' class="weui-right-unmute" hidden="{{manager!=RCID}}">
+				<text>解除全体静音</text>
+			</view>
+		</view>
+	</view>
+	<!--人员列表--------------------------------------------------------------------------->
+	 <view class="list_box">
+			<view class="weui-list-ulbox" wx:for='{{userlist}}' wx:key="*this">
+					<view class="weui-list-left">
+					<text>{{item.username}}</text>
+					<text hidden="{{manager!=item.meetingAccount}}">(主持人)</text>	
+					</view>
+					<view class="weui-list-right">
+						<text class="iconfont icon-zhuping {{currID==item.meetingAccount ? 'curr' : ''}}" bindtap="changeHomeScreen" data-data="{{item}}"></text>
+						<text class="iconfont icon-quanjutiren32" style="margin: 0 40rpx;" hidden="{{manager!=RCID}}" bindtap="changeKicking"></text>
+						<text class="iconfont icon-jingyin1" hidden="{{manager!=RCID}}" bindtap="changeSingleMute"></text>
+					</view>
+	 		</view>
+		</view>
+	<!--人员列表--------------------------------------------------------------------------->
+	<!-- 底部弹出信息 -->
+	<view class="modals modals-bottom-dialog" hidden="{{hideModal}}">
+		<view class="modals-cancel" bindtap="hideModal"></view>
+		<view class="bottom-dialog-body bottom-pos" animation="{{animationData}}">
+			<view class="weui-More-Settings">
+				<text class="weui-More-Settings-left">更多设置</text>
+				<text bindtap="hideModal" class="weui-More-Settings-right iconfont icon-guanbi"></text>
+			</view>
+			<view class="voice">
+				<text>音量调节:</text>
+				<slider min="0" max="5" value="{{volvalue}}" activeColor="#10AEFF" bindchange="changevol" />
+			</view>
+			<!-- <view class="record-video-box">
+				<view class="record-video-left">录视频</view>
+				<view class="red_btn_audio">
+					<view bindtap="recordVideo" class="two-red-btn">
+						<view class="two-red-center"></view>
+					</view>
+					<text class="red_btn_text">正在录视频 00:20:34</text>
+				</view>
+			</view>
+			<view class="record-video-box">
+				<view class="record-video-left">录音</view>
+				<view class="red_btn_audios">
+					<view bindtap="recording" class="two-red-btns">
+						<view class="two-red-centers"></view>
+					</view>
+				</view>
+			</view>
+			<view class="weui-painting-metting">
+				<view class="weui-painting-metting-title">画中画设置</view>
+				<view class="weui-painting-select-box">
+					<view bindtap="frame" class="weui-painting-select blueShow">
+						<text class="weui-painting-btn">单屏 </text>
+						<text class="iconfont icon-queding"></text>
+					</view>
+					<view bindtap="frame" class="weui-painting-select" style="margin:auto;">
+						<text class="weui-painting-btn">画中画 </text>
+					</view>
+					<view bindtap="frame" class="weui-painting-select">
+						<text class="weui-painting-btn">双屏 </text>
+					</view>
+				</view>
+			</view> -->
+			<view class="weui-painting-metting">
+				<view class="weui-painting-metting-title">会议控屏设置</view>
+				<view class="weui-painting-select-box">
+					<radio checked="{{userlist_off}}" bindtap="personList" class="radio-style" color="#1EB2FF">人员列表</radio>
+					<radio checked="{{writeboard_off}}" bindtap="whiteBoard" class="radio-style" color="#1EB2FF" style="margin-left:10%;"> 白板</radio>
+				</view>
+				<view class="weui-painting-select-box">
+					<radio checked="{{autocut_off}}" bindtap="autoScreen" class="radio-style" color="#1EB2FF"> 自动切屏</radio>
+					<radio checked="{{charroom_off}}" bindtap="chatRoom" class="radio-style" color="#1EB2FF" style="margin-left:12%;"> 聊天室</radio>
+					<radio checked="{{screenmode_off}}" bindtap="ScreenMode" class="radio-style" color="#1EB2FF" style="margin-left:12%;"> 大屏模式</radio>
+				
+				</view>
+			</view>
+
+		</view>
+	</view>
+</view>

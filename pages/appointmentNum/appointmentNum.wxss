@@ -1,0 +1,126 @@
+/* pages/appointmentNum/appointmentNum.wxss */
+@import "../../wxss/icon.wxss";
+
+.header {
+  margin-top: 60rpx;
+  font-size: 50rpx;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.liner-circle {
+  margin-right: 40rpx;
+  width: 100rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  box-sizing: border-box;
+  padding: 8rpx;
+  background-image: -webkit-linear-gradient(top, #e977bc 0%, #e977bc 30%, #8c86cb 60%, #98dcf6 90%);
+  background-image: -moz-linear-gradient(top, #e977bc 0%, #e977bc 30%, #8c86cb 60%, #98dcf6 90%);
+  background-image: linear-gradient(top, #e977bc 0%, #e977bc 30%, #8c86cb 60%, #98dcf6 90%);
+  border-radius: 50%;
+  margin-bottom: 10rpx;
+  text-align: center;
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #fff;
+  text-align: center;
+}
+
+.icon-queding {
+  font-size: 60rpx;
+  color: #11adff;
+  position: relative;
+  left: 0rpx;
+  top: -5rpx;
+}
+
+.main {
+  margin-top: 40rpx;
+  padding: 0 40rpx;
+  font-size: 24rpx;
+}
+
+.section {
+  padding: 30rpx 20rpx;
+  border-bottom: 1px solid #f6f6f6;
+}
+
+.section>.label {
+  display: inline-block;
+  margin-right: 40rpx;
+}
+
+.section>.value1 {
+  font-size: 48rpx;
+  display: inline-block;
+  margin-right: 20rpx;
+}
+
+.section>.value2 {
+  font-size: 32rpx;
+}
+
+.section>.unit {
+  font-size: 30rpx;
+}
+
+.countdown {
+  color: #fa74ec;
+  margin-left: 135rpx;
+}
+
+.btn-area {
+  width: 58%;
+  margin: 40rpx auto;
+  text-align: center;
+  margin-top: 64rpx;
+}
+
+.btn-area button {
+  /*background-color: #ff9900;*//* margin: 0; */
+  padding: 0;
+  color: #0faeff;
+  font-size: 37rpx;
+  border: none;
+  width: 100%;
+  height: 100rpx;
+  line-height: 25rpx;
+  font-weight: none;
+}
+
+.copy, .share {
+  width: 100%;
+  border: 2px solid #0faeff;
+  border-radius: 50rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  margin-bottom: 40rpx;
+  color: #0faeff;
+  font-size: 37rpx;
+}
+
+.active {
+  color: #fff;
+  background-color: #0faeff;
+}
+
+.btn-area button {
+  color: #fff;
+}
+
+.btn-area button .btn2 {
+  color: #0faeff;
+}
+
+.shareBtn {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}

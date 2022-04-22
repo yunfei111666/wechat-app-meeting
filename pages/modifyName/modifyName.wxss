@@ -1,0 +1,43 @@
+
+.name{
+  position: relative;
+}
+.name>input{
+  width: 662rpx;
+  height: 88rpx;
+  margin: 0 auto;
+  background: #f6f6f6;
+  border-radius: 9px;
+  padding-left: 20rpx;
+}
+.name image{
+  width: 32rpx;
+  height: 32rpx;
+  position: absolute;
+  right: 80rpx;
+  top: 30rpx;
+  z-index:2;
+  opacity: 0.5;
+
+}
+.title{
+  font-size: 18rpx;
+  color: #666666;
+  padding: 20rpx 50rpx;
+}
+.submit{
+
+
+}
+.submit text{
+  width: 276rpx;
+  height: 76rpx;
+  line-height: 76rpx;
+  text-align: center;
+  background: #10AEFF;
+  border-radius: 48px;
+  color:#ffffff;
+  float: right;
+  margin-right: 35rpx;
+  margin-top: 35rpx;
+}

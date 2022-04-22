@@ -1,0 +1,45 @@
+<!--pages/deviceChange/deviceChange.wxml-->
+<view class="info-no-content {{showView?'show':'hide'}}">
+    <image src="../../img/appointment/no_device.png"></image>
+    <text>没有发现其他设备</text>
+    <text>请确认设备与手机蓝牙都开启</text>
+    <!-- <text class="device-sao">扫一扫添加设备</text> -->
+</view>
+<view class="devicechange {{showView?'hide':'show'}}">
+  <view bindtap='seleDevice' id="{{item.deviceNo}}" class='section' wx:for="{{deviceList}}">
+    <view class='itemA'>{{item.nickname}}</view>
+    <view class='itemB'>
+      <text class='status itemColorB'>在线</text>
+      <text class='status itemColorB'>已连接</text>
+    </view>
+    <view class='itemC'>
+      <text catchtap='unBind' id='{{item.deviceNo}}' class='iconfont icon-jiebang'>解绑设备</text>
+      <text class='iconfont icon-zhongxinjiazai'>重连设备</text>
+      <!-- <text class='iconfont icon-fenxiang'>分享设备</text> -->
+    </view>
+  </view>
+  <!-- <view class='section'>
+    <view class='itemA'>会议宝009</view>
+    <view class='itemB'>
+      <text class='status itemColorB'>在线</text>
+      <text class='status itemColorGrey'>未连接</text>
+    </view>
+    <view class='itemC'>
+      <text class='iconfont icon-jiebang'>解绑设备</text>
+      <text class='iconfont icon-zhongxinjiazai'>重连设备</text>
+      <text class='iconfont icon-fenxiang'>分享设备</text>
+    </view>
+  </view> -->
+  <!-- <view class='section'>
+    <view class='itemA'>会议宝009</view>
+    <view class='itemB'>
+      <text class='status itemColorGrey'>离线</text>
+      <text class='status itemColorGrey'>未连接</text>
+    </view>
+    <view class='itemC'>
+      <text class='iconfont icon-jiebang'>解绑设备</text>
+      <text class='iconfont icon-zhongxinjiazai'>重连设备</text>
+      <text class='iconfont icon-fenxiang'>分享设备</text>
+    </view>
+  </view> -->
+</view>

@@ -1,0 +1,14 @@
+<view class="Page">
+  <view class="header">
+    <text>选择您的WiFi网络</text>
+  </view>
+  <view class="weui-cells weui-cells_after-title">
+       <view class="weui-cell" wx:for="{{wifiList}}" wx:key="*this" bindtap="jump" data-data="{{item}}">
+            <view class="weui-cell__bd">
+              <image src="../../img/shebei/wifi.png" class="wifi_icon"></image>
+              <text class="wifi_name">{{item.SSID}}</text>
+            </view>
+            <view class="weui-cell__ft"></view>
+       </view>
+  </view>
+</view>

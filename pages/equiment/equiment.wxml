@@ -1,0 +1,48 @@
+<view class="equiment">
+  <!-- <view class="deviceScan">
+    <text class="iconfont icon-saoma"></text>
+    <text class="device-scan-font">扫一扫会议宝</text>
+  </view> -->
+  <!-- 手机蓝牙未开启 -->
+  <view class="blue-not-enabled {{notBlueShowOrHide?'hide':'show'}}">
+     <text class="blue-title">手机蓝牙未开启</text>
+     <view class="blue-icon iconfont icon-lanyaduankai"></view>
+     <view class="blue-prompt">请返回手机<text class="blue-prompt-config"> 设置 </text>页面打开手机蓝牙</view>
+  </view>
+  <!-- 没有发现蓝牙设备 -->
+  <view class="blue-not-enabled {{notDeiveceShowOrHide?'hide':'show'}}">
+     <text class="blue-title">没有发现蓝牙设备</text>
+     <view class="iconfont icon-cuowutishi"></view>
+     <view class="blue-prompt">请确认手机与设备蓝牙开启，并下拉刷新</view>
+     <!-- <view class="blue-prompt">请确认手机与设备蓝牙开启，或者直接扫设备</view>
+     <view class="blue-prompt" style="padding-top:0;">二维码添加设备</view> -->
+  </view>
+  <!-- hearder部分 -->
+  <view class="header">
+    <view class="search_star {{loadingShowHide?'hide':'show'}}">
+      <image animation="{{animationData}}" src="../../img/shebei/yuan2.png"></image>
+      <text class="spyScan">蓝牙扫描附近设备中....</text>
+      <text class="hint-spyScan">请确保手机与设备蓝牙开启</text>
+    </view>
+    <view class="eq-header {{hasDeviceShowOrHide?'hide':'show'}}">
+      <view class='liner-circle'>
+        <view class='box'>
+          <text class='iconfont icon-queding'></text>
+        </view>
+      </view>
+      <view class='title'>发现{{list.length}}个设备</view>
+    </view>
+  </view>
+  <!-- body部分 -->
+  <view class="deviceList {{hasDeviceShowOrHide?'hide':'show'}}">
+    <view class="list" wx:for="{{list}}" wx:key='*this' id="{{advertisDataArr[index]}}" data-data="{{item}}" bindtap="createBLEConnection">
+      <view class="list_name">{{item.localName}}</view>
+      <!-- <view class="list_id">{{item.deviceId}}</view> -->
+      <view class="list_href {{dev_id==item.deviceId?'iconfont icon-queding':''}}"></view>
+    </view>
+  </view>
+  <!-- bottom部分 -->
+  <view class="btn-area {{hasDeviceShowOrHide?'hide':'show'}}">
+    <button bindtap="naviToWiFi" class="one-appointment" style="background-color:#10AEFF" formType="submit"> 连接设备 </button>
+  </view>
+</view>

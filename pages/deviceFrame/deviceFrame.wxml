@@ -1,0 +1,27 @@
+<view class="Frame">
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">画中画</view>
+      <view class="weui-cell__ft"><switch bindchange="switch1Change2"></switch></view>
+    </view>
+    <view class="weui-cell">
+      <view class="weui-cell__bd">画面设定</view>
+      <view class="weui-cell__ft"><switch bindchange="switch1Change2"></switch></view>
+    </view>
+  </view>
+
+  <view class="angle">角度控制0~90</view>
+  <view class="she">
+    <text>摄像头1</text>
+    <slider bindchange="sliderBindchange" min="{{min}}" max="{{max}}" show-value class="slider"/>
+  </view>
+  <view class="she">
+    <text>摄像头2</text>
+    <slider bindchange="sliderBindchange" min="{{min}}" max="{{max}}" show-value class="slider"/>
+  </view>
+  <view class="she">
+    <text>摄像头3</text>
+    <slider bindchange="sliderBindchange" min="{{min}}" max="{{max}}" show-value class="slider"/>
+  </view>
+
+</view>

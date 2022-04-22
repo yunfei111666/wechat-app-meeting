@@ -1,0 +1,237 @@
+/* pages/equiment/equiment.wxss */
+@import "../../wxss/icon.wxss";
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none !important;
+}
+
+.blue-not-enabled {
+  width: 100%;
+  height: 100%;
+  padding-top: 1.8%;
+  text-align: center;
+}
+.icon-cuowutishi{
+  font-size: 100rpx;
+  color: #dadae1;
+}
+
+.blue-title {
+  font-size: 42rpx;
+  color: #2e2e39;
+  padding-bottom: 5.5%;
+}
+
+.blue-icon {
+  width: 100rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  border: 6rpx solid #d4d4dc;
+  border-radius: 100rpx;
+  margin: 5.5% auto;
+}
+
+.icon-lanyaduankai {
+  color: #dadae1;
+  font-size: 70rpx;
+}
+
+.blue-prompt {
+  padding-top: 4.6%;
+  height: 70rpx;
+  font-size: 24rpx;
+  color: #888;
+}
+
+.blue-prompt-config {
+  font-size: 26rpx;
+  color: rgb(73, 73, 73);
+}
+
+.deviceScan {
+  width: 100%;
+  height: 96rpx;
+  text-align: right;
+  padding-top: 1.3%;
+}
+
+.icon-saoma {
+  width: 32rpx;
+  height: 32rpx;
+  color: #4b4b4b;
+  padding-right: 2.7%;
+}
+
+.device-scan-font {
+  font-size: 28rpx;
+  color: #414141;
+  padding-right: 5.9%;
+}
+
+.header {
+  padding: 30rpx 0;
+  /* border: 1px solid #ddd; */
+}
+
+.eq-header {
+  /* margin-top: 60rpx; */
+  font-size: 50rpx;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.liner-circle {
+  margin-right: 40rpx;
+  width: 100rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  box-sizing: border-box;
+  padding: 8rpx;
+  background-image: -webkit-linear-gradient(top, #e977bc 0%, #e977bc 30%, #8c86cb 60%, #98dcf6 90%);
+  background-image: -moz-linear-gradient(top, #e977bc 0%, #e977bc 30%, #8c86cb 60%, #98dcf6 90%);
+  background-image: linear-gradient(top, #e977bc 0%, #e977bc 30%, #8c86cb 60%, #98dcf6 90%);
+  border-radius: 50%;
+  margin-bottom: 10rpx;
+  text-align: center;
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #f2f2f2;
+  text-align: center;
+}
+
+.title {
+  font-size: 42rpx;
+}
+
+.icon-queding {
+  font-size: 50rpx;
+  color: #11adff;
+  position: relative;
+  left: 0rpx;
+  top: -5rpx;
+}
+
+.deviceList {
+  width: 88.3%;
+  height: 100%;
+  padding-left: 5.9%;
+}
+
+.search_star {
+  position: relative;
+  text-align: center;
+  height: 390rpx;
+}
+
+.search_star>image {
+  width: 300rpx;
+  height: 300rpx;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.spyScan {
+  position: absolute;
+  left: 278rpx;
+  top: 100rpx;
+  display: inline-block;
+  width: 195rpx;
+  font-size: 35rpx;
+  font-weight: 600;
+}
+
+.hint-spyScan {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  font-size: 32rpx;
+}
+
+.search_end {
+  width: 100%;
+  height: 200rpx;
+  line-height: 200rpx;
+  text-align: center;
+}
+
+.search_end>image {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.search_end>text {
+  position: relative;
+  top: -81rpx;
+  font-size: 35rpx;
+  font-weight: 600;
+  left: 20rpx;
+}
+
+.equiment button {
+  margin: 30rpx auto;
+}
+
+.list {
+  padding-top: 25rpx;
+  height: 94rpx;
+  line-height: 94rpx;
+  border-bottom: 1rpx solid #ddd;
+}
+
+.list_name {
+  height: 40rpx;
+}
+
+.selectBor {
+  border: 2rpx solid #61b625;
+}
+
+.list_href {
+  line-height: 10rpx;
+  border-radius: 30rpx;
+  color: #10aeff;
+  float: right;
+  top: 0;
+}
+
+.btn-area {
+  width: 80%;
+  margin: 0 auto;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+.btn-area>.one-appointment {
+  width: 75%;
+  background-color: #10aeff;
+  border-radius: 50rpx;
+  font-size: 36rpx;
+}
+
+.btn-area button {
+  /*background-color: #ff9900;*/
+  margin: 0;
+  padding: 0;
+  margin-top: 64rpx;
+  color: #fff;
+  font-size: 37rpx;
+  border: none;
+  width: 100%;
+  height: 96rpx;
+  line-height: 96rpx;
+  font-weight: none;
+}
+
+/* 图片旋转 */

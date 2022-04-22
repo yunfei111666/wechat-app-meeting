@@ -1,0 +1,38 @@
+.page{
+  background: #F9F9F9;
+}
+.top{
+  padding: 0rpx 22rpx;
+  background: #fff;
+}
+.bottom{
+  background: #ffffff;
+  margin-top:20rpx;
+  padding: 14rpx 22rpx;
+}
+.voice{
+  padding: 20rpx 0 0 30rpx;
+}
+.voice text{
+  margin: 40rpx 0;
+}
+
+.weui-cells {
+  font-size: 16px;
+}
+.footer{
+  position: absolute;
+  bottom: 50rpx;
+  width: 520rpx;
+  height: 96rpx;
+  border: 1px solid #f6f6f6;
+  border-radius: 25px;
+  line-height: 96rpx;
+  text-align: center;
+  left: 50%;
+  margin-left: -262rpx;
+}
+.footer>text{
+  font-size: 18px;
+  color: #888888;
+}

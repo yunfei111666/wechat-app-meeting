@@ -1,0 +1,12 @@
+<view class="Page">
+  <view>
+    <view class="weui-cell">
+      <view class="weui-cell__bd">录像</view>
+     <view class="weui-cell__ft"><switch bindchange="switch1Change2"></switch></view>
+    </view>
+    <view class="weui-cell">
+      <view class="weui-cell__bd">录音</view>
+     <view class="weui-cell__ft"><switch bindchange="switch1Change2"></switch></view>
+    </view>
+  </view>
+</view>

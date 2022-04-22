@@ -1,0 +1,26 @@
+<view class="Page">
+  <view class="header">
+    <text>为{{deviceName}}设置Wi-Fi网络</text>
+  </view>
+  <view>
+    <view class="wifi_title">Wi_Fi名称</view>
+    <view class="wifi_contetn">
+      <input class="wifiNane" bindinput="getname" value="{{wifiMsg}}"></input>
+      <text class="wifiChange" bindtap="change">更换WiFi</text>
+    </view>
+    <view class="wifi_title">Wi_Fi密码</view>
+    <view class="wifi_contetn">
+     <input bindinput="getpasswd" placeholder="请输入密码" password="{{show}}"/>
+     <image src="../../img/shebei/view.png" class="view_off"  bindtap="look" wx:if="{{show}}"></image>
+     <image src="../../img/shebei/view_off.png" class="view_off" bindtap="look" wx:else></image>
+     
+    </view>
+    <!-- <view style="margin-top: 40rpx;">
+      <text class="icon-chenggong"></text>
+      <text class="">记住密码</text>
+    </view> -->
+  </view>
+  <view class="footer" bindtap="connectWifi">
+    一键配网
+  </view>
+</view>

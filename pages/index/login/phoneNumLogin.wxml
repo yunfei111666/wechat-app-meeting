@@ -1,0 +1,55 @@
+<view class="login-page">
+	<view class="login-top-view">
+    <image class="login-top-logo" src="../../../img/login-logo.png" mode="scaleToFill"></image>
+  </view>
+  <view class="login-mid-view">
+    <view class="login-mid-item">
+      <input class="login-mid-input" type="number" value="{{phoneNum}}" bindinput="getPhoneNum" placeholder="请输入手机号" placeholder-class="login-mid-input"></input>
+      <button class="login-mid-btn" bindtap="getSmsCodeBtnClick" style="width: 240rpx;height: 70rpx; color:{{sendColor}}" disabled="{{smsFlag}}" >{{sendTime}}</button>
+    </view>
+    <view class="login-mid-item">
+      <input class="login-mid-input" type="text" value="{{smsCode}}" bindinput="getSmsCode" placeholder="验证码" placeholder-class="login-mid-input"></input>
+    </view>
+  </view>
+  <view class="login-bottom-view">
+		<view class="login-bottom-btn" bindtap="verificationCodeBtnClick">
+      <text class="login-bottom-btn-text">绑 定</text>
+    </view>
+	</view>
+</view>
+
+<!-- <view class="weui-form">
+		<view class="weui-form__text-area">
+			<h2 class="weui-form__title">会议宝</h2>
+			<view class="weui-form__desc">会议宝</view>
+		</view>
+		<view class="weui-form__control-area">
+			<view class="weui-cells__group weui-cells__group_form">
+				<view class="weui-cells weui-cells_form">
+					<view class="weui-cell weui-cell_active">
+						<view class="weui-cell__hd"><label class="weui-label">手机号</label></view>
+						<view class="weui-cell__bd">
+              <input class="weui-input" type="number" value="{{phoneNum}}" bindinput="getPhoneNum" placeholder="请输入手机号" placeholder-class="weui-input__placeholder"></input>
+						</view>
+						<view class="weui-cell__ft">
+							<a class="weui-btn_reset weui-btn_icon">
+								<i class="weui-icon-info-circle"></i>
+							</a>
+						</view>
+					</view>
+					<view class="weui-cell weui-cell_active weui-cell_vcode">
+						<view class="weui-cell__hd"><label class="weui-label">验证码</label></view>
+						<view class="weui-cell__bd">
+              <input class="weui-input" type="text" value="{{smsCode}}" bindinput="getSmsCode" placeholder="输入验证码" placeholder-class="weui-input__placeholder"></input>
+						</view>
+						<view class="weui-cell__ft">
+							<button class="weui-btn weui-btn_default weui-vcode-btn" bindtap="getSmsCodeBtnClick" >发送验证码</button>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="weui-form__opr-area">
+			<button class="weui-btn weui-btn_primary" bindtap="verificationCodeBtnClick">绑 定</button>
+		</view>
+	</view> -->

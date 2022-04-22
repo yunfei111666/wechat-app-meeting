@@ -1,0 +1,185 @@
+/**index.wxss**/
+@import "../../weui.wxss";
+@import "../../wxss/icon.wxss";
+
+.userinfo {
+  position: relative;
+  width: 750rpx;
+  height: 150rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  display: flex;
+  width: 120rpx;
+  height: 120rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-login {
+  margin-left: 20rpx;
+}
+
+.add-equipment_little {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.add-equipment_little_img {
+  height: 36rpx;
+  width: 36rpx;
+  margin-right: 5rpx;
+}
+
+.add-equipment_little_text {
+  margin-right: 20rpx;
+  font-size: 30rpx;
+  color: #58585f;
+}
+
+.equipment {
+  width: 750rpx;
+  height: 400rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.equipment-block {
+  display: flex;
+  height: 300rpx;
+  margin: 20rpx;
+  border-radius: 10px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(120deg, #fe47a1, #15ccf9);
+}
+
+.equipment-img {
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 10rpx;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 70rpx;
+  color: #fff;
+  border-radius: 40rpx;
+  background-color: #e1e1e149;
+}
+
+.equipment-text {
+  font-size: 50rpx;
+  color: white;
+  margin-left: 10rpx;
+}
+
+.equipment-block-haven {
+  display: flex;
+  height: 300rpx;
+  margin: 20rpx;
+  border-radius: 10px;
+  flex-direction: column;
+  background: linear-gradient(120deg, #fe47a1, #15ccf9);
+  align-content: space-between;
+}
+
+.equipment-block-haven-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 20rpx;
+  /* background: red; */
+}
+
+.equipment-block-haven-name {
+  font-size: 42rpx;
+  color: white;
+  margin-left: 40rpx;
+}
+
+.equipment-block-haven-img {
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 10rpx;
+}
+
+.equipment-block-haven-btnblock {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 40rpx;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+  justify-content: space-between;
+  margin-top: 100rpx;
+  /* background-color: yellow; */
+}
+
+.equipment-block-haven-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 80rpx;
+  border-radius: 40rpx;
+  background-color: rgba(251, 251, 251, 0.4);
+}
+
+.equipment-block-haven-btnimg {
+  width: 32rpx;
+  height: 32rpx;
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  margin-right: 5rpx;
+}
+
+.equipment-block-haven-btntext {
+  font-size: 28rpx;
+  margin-left: 5rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  margin-right: 30rpx;
+  color: white;
+}
+
+.index-line {
+  background-color: #f8f9f9;
+  height: 20rpx;
+  width: 100%;
+}
+
+.index-bottom-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.index-bottom-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100rpx;
+  margin-left: 45rpx;
+  margin-right: 60rpx;
+  border-bottom: 1px #f6f6f6 solid;
+  justify-content: space-between;
+}
+
+.index-bottom-text {
+  font-size: 28rpx;
+  align-items: center;
+}
+
+.index-bottom-img {
+  height: 45rpx;
+  width: 32rpx;
+  align-items: center;
+  color: #C5C5CA;
+}

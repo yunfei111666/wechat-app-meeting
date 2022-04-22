@@ -1,0 +1,82 @@
+.flex-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pull-up-wrapper {
+  background-color: #fff;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px 0;
+  color: #C2C2C2;
+}
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.ellipsis-2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.empty-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #F6F6F6;
+  z-index: 99;
+  text-align: center;
+}
+.empty-box>.img{
+  margin: 30% 0 20px;
+}
+.empty-box>.img image{
+  width:138px;
+  height: 122px;
+}
+.empty-box .iconfont{
+  font-size: 140px;
+  color: #CEDAE0;
+}
+.empty-box text {
+  line-height:20px;
+  color: #C5C5C5;
+  font-size:14px;
+}
+
+.list-body {
+  background-color: #fff;
+}
+.list-item {
+  border-bottom: 10px solid #F6F6F6;
+}
+.list-item .title {
+  padding: 15px;
+}
+.list-item .title text {
+  line-height: 20px;
+  font-size: 14px;
+}
+.list-item .title .iconfont {
+  position: relative;
+  top: 1px;
+  color: #04A3FF;
+  font-weight: 500;
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+.list-item .content {
+  padding: 0 20px 25px;
+}
+.list-item .content text {
+  font-size:14px;
+  line-height:26px;
+}

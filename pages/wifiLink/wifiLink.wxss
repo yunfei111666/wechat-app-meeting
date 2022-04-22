@@ -1,0 +1,65 @@
+@import "../../wxss/icon.wxss";
+.Page{
+  padding:30rpx;
+}
+.header{
+  height: 200rpx;
+  line-height: 200rpx;
+  text-align: center;
+  font-size: 35rpx;
+}
+.wifi_contetn{
+  height: 90rpx;
+  line-height: 90rpx;
+  border-bottom: 1px solid #ddd;
+  position:relative;
+}
+.wifi_contetn>image{
+  z-index:13;
+}
+.wifi_title{
+  margin-top: 20rpx;
+  font-size: 13px;
+  color: #666666;
+}
+.change{
+  font-size: 13px;
+  color: #666666;
+  float:right;
+}
+input{
+  padding: 25rpx 20rpx;
+  width: 70%;
+
+}
+
+.wifiName{
+  padding-right:155rpx;
+}
+.wifiChange{
+  position: absolute;
+  top: 1rpx;
+  right: 20rpx;
+  z-index:1;
+
+}
+
+
+.view_off{
+  position: absolute;
+  right: 50rpx;
+  top: 30rpx;
+  width: 16px;
+  height: 16px;
+}
+
+.footer{
+  width: 80%;
+  height: 75rpx;
+  line-height: 75rpx;
+  text-align: center;
+  margin: 200rpx auto;
+  color: #fff;
+  background: #10aeff;
+  border-radius: 25px;
+}

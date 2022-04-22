@@ -1,0 +1,27 @@
+<!--pages/register/register.wxml-->
+<view class="register">
+  <view class="meeting-title">加入会议</view>
+  <form bindsubmit="formSubmit">
+    <view class="input-area">
+      <view class='section'>
+        <view class='label'>会议房间号</view>
+        <input maxlength='4'  placeholder-style="font-size:32rpx"  name='meetingID' placeholder="请输入房间号" type="text" value='{{meetingID}}' />
+      </view>
+      <view class='section'>
+        <view class='label'>房间密码</view>
+        <view wx:if="{{isPassWord}}">
+          <input style="font-size:32rpx" placeholder-style="font-size:32rpx" name="password" maxlength="6" password='true' value='{{pwd_val}}' bindblur="bindblur" placeholder='请输入4位数密码,密码可为空'></input>
+          <text bindtap='isShow' class='iconfont icon-yanjing addMeeting'></text>
+        </view>
+        <view wx:if="{{!isPassWord}}" class='login_input login_password'>
+          <input name="password" style="font-size:32rpx" placeholder-style="font-size:32rpx" maxlength="6" value='{{pwd_val}}' bindblur="bindblur" placeholder='请输入4位数密码,密码可为空'></input>
+          <text bindtap='isShow' class='iconfont icon-biyan addMeeting'></text>
+        </view>
+      </view>
+    </view>
+    <view class="btn-area">
+      <button  class="one-appointment" style="background-color:#10AEFF" formType="submit" loading="{{btnLoading}}"> 一键开会 </button>
+    </view>
+  </form>
+
+</view>

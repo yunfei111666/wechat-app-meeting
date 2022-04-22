@@ -1,0 +1,40 @@
+<!--pages/register/register.wxml-->
+<view class="register">
+  <view class="meeting-title">预约会议</view>
+  <form bindsubmit="formSubmit">
+    <view class="input-area">
+      <!-- <view class='section'>
+        <view class='label'>会议房间号</view>
+        <input maxlength='20' disabled="true" name='meetingID' placeholder="请输入会议号" type="text" value='{{meetingID}}' />
+      </view> -->
+      <view class='section'>
+        <view class='label'>会议主题</view>
+        <input maxlength='20' name='title' style="font-size:32rpx"  placeholder="请输入会议主题"  placeholder-style="font-size:32rpx" type="text" value='{{centent}}' />
+      </view>
+      <view class='section' style="border-bottom: 1px solid #ddd;">
+        <view class='label'>选择会议时间</view>
+        <input maxlength='20' name='time' style='display:none;' value='{{dateTimeArray1[0][dateTime1[0]]}}-{{dateTimeArray1[1][dateTime1[1]]}}-{{dateTimeArray1[2][dateTime1[2]]}} {{dateTimeArray1[3][dateTime1[3]]}}:{{dateTimeArray1[4][dateTime1[4]]}}:00' />
+        <picker class="pickerCla" mode="multiSelector" value="{{dateTime1}}" bindchange="changeDateTime1" bindcolumnchange="changeDateTimeColumn1" range="{{dateTimeArray1}}">
+          <view class="tui-picker-detail" style="font-size:37rpx; color:#000;">
+            {{dateTimeArray1[0][dateTime1[0]]}}-{{dateTimeArray1[1][dateTime1[1]]}}-{{dateTimeArray1[2][dateTime1[2]]}} {{dateTimeArray1[3][dateTime1[3]]}}:{{dateTimeArray1[4][dateTime1[4]]}}
+          </view>
+        </picker>
+      </view>
+      <view class='section'>
+        <view class='label'>房间密码</view>
+        <view wx:if="{{isPassWord}}">
+          <input name="password" maxlength="4" password='true' value='{{pwd_val}}' bindblur="bindblur" placeholder='请输入4位数密码,密码可为空' style="font-size:32rpx" placeholder-style="font-size:32rpx"></input>
+          <text bindtap='isShow' class='iconfont icon-yanjing addMeeting'></text>
+        </view>
+        <view wx:if="{{!isPassWord}}" class='login_input login_password'>
+          <input name="password" maxlength="4" value='{{pwd_val}}' bindblur="bindblur" placeholder='请输入4位数密码,密码可为空' style="font-size:32rpx"placeholder-style="font-size:32rpx"></input>
+          <text bindtap='isShow' class='iconfont icon-biyan addMeeting'></text>
+        </view>
+      </view>
+    </view>
+    <view class="btn-area">
+      <button class="one-appointment" style="background-color:#10AEFF" formType="submit" loading="{{btnLoading}}"> 一键预约 </button>
+    </view>
+  </form>
+
+</view>

@@ -1,0 +1,33 @@
+<view class="top-icon-logo">
+	<view class="icon-logo">
+		<image class="logo-image" src="../../../img/logo.png"></image>
+	</view>
+	<view class="rigth-view">
+		<view class="top-right-title">E V A 会 议 宝</view>
+		<view class="top-tighr-titleSml">智 能 连 接 远 程 会 议</view>
+	</view>
+</view>
+<view class="login-background-box">
+	<image class="login-background" src="../../../img/loginBackground.png"></image>
+</view>
+<view class="login-btn-box {{blueBtnColor?'blueBtnColor':''}}" style="margin-top:70rpx">
+	微信用户一键登录
+	<button hover-class="none" type="primary" class="login-text-1" plain='true' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"></button>
+</view>
+<view bindtap="naviToPhoneLogin" class="login-btn-box {{blueBtnColor?'':'blueBtnColor'}}">
+  手机号码登录/注册
+</view>
+<view class="foot-text">登录代表同意EVA用户<text class="foot-text-privacy">服务协议、隐私政策</text></view>
+
+<!--pages/index/login/login.wxml-->
+<!-- <view class="page">
+	<view class="page__hd">
+		<view class="title">请选择登陆方式</view>
+	</view>
+	<view class="page__bd">
+		<view class="button-sp-area">
+       <button type="primary" class="weui-btn weui-btn_primary" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">微信号登陆</button>
+      <button type="primary" class="weui-btn weui-btn_primary" bindtap="naviToPhoneLogin">手机号登陆</button>
+		</view>
+	</view>
+</view> -->

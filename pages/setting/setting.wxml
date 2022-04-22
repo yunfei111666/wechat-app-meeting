@@ -1,0 +1,18 @@
+<!--pages/setting/setting.wxml-->
+<view>
+  <view class="box_lsit">
+    <text>摄像开关</text><switch bindchange="switch1Change" checked="{{camera}}" class="switch"></switch>
+  </view>
+  <view class="box_lsit">
+    <text>全员静音开关</text>
+    <switch bindchange="switch1Change2" class="switch"></switch>
+  </view>
+  <view class="box_lsit">
+    <text>麦克风开关</text>
+    <switch bindchange="switch1Change3" class="switch"></switch>
+  </view>
+    <view class="box_lsit">
+    <text>音量控制</text>
+   <slider bindchange="sliderBindchange" min="{{min}}" max="{{max}}" show-value/>
+  </view>
+</view>

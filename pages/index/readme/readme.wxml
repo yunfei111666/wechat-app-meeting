@@ -1,0 +1,2 @@
+<!--pages/index/readme/readme.wxml-->
+<web-view src="{{readmeUrl}}"></web-view>

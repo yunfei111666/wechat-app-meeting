@@ -1,0 +1,2 @@
+<!--pages/index/feedback/feedback.wxml-->
+<web-view src="{{feedbackurl}}"></web-view>
